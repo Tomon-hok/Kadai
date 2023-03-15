@@ -1,0 +1,16 @@
+
+.header-search__text {
+    display: inline-block; /* なくても大丈夫だけど、念の為 */
+    position: relative;    /* 基準値とする */ 
+
+    &::before {
+        content: "";           /* 疑似要素に必須 */
+        width: 16px;           /* アイコンの横幅 */
+        height: 16px;          /* アイコンの高さ */
+        background: url(../img/magnifying-glass-solid.svg) no-repeat center center / auto 100%; /* 背景にアイコン画像を配置 */
+        display: inline-block; /* 高さを持たせるためにインラインブロック要素にする */
+        position: absolute;    /* 相対位置に指定 */
+        top: 2px;              /* アイコンの位置。微調整してね */
+        left: 5px;             /* アイコンの位置。微調整してね */
+    }
+}
