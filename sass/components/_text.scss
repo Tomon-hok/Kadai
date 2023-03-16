@@ -2,7 +2,7 @@
 .header-search__text {
     display: inline-block; /* なくても大丈夫だけど、念の為 */
     position: relative;    /* 基準値とする */ 
-
+    
     &::before {
         content: "";           /* 疑似要素に必須 */
         width: 16px;           /* アイコンの横幅 */

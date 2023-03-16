@@ -1,7 +1,15 @@
 /* headerの設定 */
-
 .header {
-    display: flex;
-    justify-content: space-between;
+    height: 112px;
     background-color: $color-pink-light;
 }
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: min(92%, 1166px);
+    margin: auto;
+}
+

@@ -27,7 +27,8 @@ body {
 .header-search__btn {
   border: 1px solid #707070;
   border-radius: 10px;
-  width: 50px;
+  width: 136px;
+  height: 46px;
 }
 
 .header-search__text {
@@ -89,7 +90,15 @@ body {
 
 /* headerの設定 */
 .header {
+  height: 112px;
+  background-color: #FFF7EF;
+}
+
+.header-container {
   display: flex;
   justify-content: space-between;
-  background-color: #FFF7EF;
+  align-items: center;
+  height: 100%;
+  width: min(92%, 1166px);
+  margin: auto;
 }/*# sourceMappingURL=main.css.map */
