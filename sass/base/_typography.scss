@@ -1,6 +1,5 @@
 /*フォントの定義*/
 
-
 .header-title {
     font-family: $font-name-roboto;
     font-size: 32px;
@@ -8,3 +7,9 @@
     color: $color-gray;
 }
 
+h1 {
+    font-family: $font-name-M;
+    font-size: 24px;
+    font-weight: 700;
+    color: $color-white;
+}
