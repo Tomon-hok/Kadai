@@ -30,13 +30,15 @@
       display: flex;
       padding: 10px;
       justify-content: space-evenly;
-      
-      .child-box {
-       // width: 300px;
-        border: 1rem solid;
+
+      .contents-childbox{
+        
+        width: 625px;
+        height: 750px;
+        border: 0.3rem solid;
       }
-      
     }
+
     .map {
       grid-column: 1 / span 2;
     }

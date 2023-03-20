@@ -13,3 +13,21 @@ h1 {
     font-weight: 700;
     color: $color-white;
 }
+
+.contents-deco {
+    font-family:  $font-name-roboto;
+    font-size: 24px;
+    font-weight: 700;
+    color: $color-white;
+
+
+    &::after {
+        display: block;
+        content: '';
+        width: 50px;
+        height: 0px;
+        border-top: solid 1px $color-white;
+        margin-top: 0.6em;
+    }
+}
+
