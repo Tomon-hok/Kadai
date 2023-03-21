@@ -31,3 +31,16 @@ h1 {
     }
 }
 
+.map_deco {
+    font-family:  $font-name-roboto;
+    font-size: 24px;
+    font-weight: 700;
+    color: $color-white;
+
+    margin: 0;
+    padding: .2em;
+    position: relative;
+    z-index: 1;
+  
+
+}

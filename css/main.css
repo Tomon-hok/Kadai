@@ -43,6 +43,17 @@ h1 {
   margin-top: 0.6em;
 }
 
+.map_deco {
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  padding: 0.2em;
+  position: relative;
+  z-index: 1;
+}
+
 .header-search__btn {
   border: 1px solid #707070;
   border-radius: 10px;
@@ -147,27 +158,47 @@ h1 {
   padding-top: 120px;
 }
 
-/* Google Mapを囲う要素 */
 .map {
-  /*
-      padding-top: 75%; /* 比率を4:3に固定
-  */
+  position: relative;
   width: 100%;
   height: 350px;
   background-image: url(../img/shop_map.png);
-  background-position: center;
+  background-position: 50%;
   background-size: cover;
-  background-color: rgb(7, 7, 7);
-  background-blend-mode: lighten;
+}
+.map::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
-/* Google Mapのiframe */
-/*
-  .map iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-  }
-  *//*# sourceMappingURL=main.css.map */
+.map-deco-layout {
+  width: 50%;
+  height: 350px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid #000000;
+}
+
+.footer {
+  padding: 50px 0;
+  background-color: #9d8670;
+  color: #fff;
+  font-size: 15px;
+  height: 20px;
+}
+
+.footer-container {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+/*# sourceMappingURL=main.css.map */

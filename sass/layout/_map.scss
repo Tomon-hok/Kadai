@@ -1,25 +1,28 @@
-/* Google Mapを囲う要素 */
 .map {
-/*
-    padding-top: 75%; /* 比率を4:3に固定
-*/
+    position: relative;
     width: 100%;
     height: 350px;
     background-image: url(../img/shop_map.png);
-    background-position: center;
+    background-position: 50%;
     background-size: cover;
-    background-color: rgba(7, 7, 7, 1);
-    //background: linear-gradient(to left, $color-gray 28px, $color-gray-light 77%);
-    background-blend-mode:lighten;
-}
-  
-  /* Google Mapのiframe */
-/*
-  .map iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
+
+    
+    &::after{
+      content: '';
+      background-color: rgba(0,0,0,.5);
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+
   }
-  */
+
+  .map-deco-layout{
+    width: 50%;
+    height: 350px;
+    background-color: rgba(255,255,255,0.8);
+    border: 2px solid #000000;
+
+  }
