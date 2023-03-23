@@ -28,14 +28,19 @@
       grid-column: 1 / span 2;
       
       display: flex;
+      flex-direction: column;
       padding: 10px;
       justify-content: space-evenly;
 
       .contents-childbox{
-        
         width: 625px;
         height: 750px;
         border: 0.3rem solid;
+      }
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
       }
     }
 

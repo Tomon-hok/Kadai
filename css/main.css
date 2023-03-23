@@ -127,6 +127,7 @@ ul {
 .container .contents {
   grid-column: 1/span 2;
   display: flex;
+  flex-direction: column;
   padding: 10px;
   justify-content: space-evenly;
 }
@@ -134,6 +135,12 @@ ul {
   width: 625px;
   height: 750px;
   border: 0.3rem solid;
+}
+@media (min-width: 768px) {
+  .container .contents {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 .container .map {
   grid-column: 1/span 2;
@@ -154,11 +161,24 @@ ul {
 
 .header-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 100%;
   width: min(92%, 1166px);
   margin: auto;
+}
+@media (min-width: 768px) {
+  .header-container {
+    flex-direction: row;
+    align-items: center;
+  }
+  .header-container .header-container > .header-title {
+    flex: 1;
+  }
+  .header-container .header-container > .header-search {
+    flex: 2;
+  }
 }
 
 .l-hero {
