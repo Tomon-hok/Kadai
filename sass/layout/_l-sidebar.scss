@@ -1,0 +1,21 @@
+
+@use "../global" as g;
+
+.sidebar{
+    background-color: g.$color-pink-light;
+}
+
+
+ul{
+    list-style: none;
+
+    margin-top: 10px;
+    margin-left: 0px;
+
+}
+
+li{
+    list-style: none;
+    margin-top: 10px;
+    margin-left: 0px;
+}

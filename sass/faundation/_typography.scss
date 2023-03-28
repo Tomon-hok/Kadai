@@ -1,0 +1,62 @@
+@use "../global" as g;
+
+/*フォントの定義*/
+.header-title {
+    font-family: g.$font-name-roboto;
+    font-size: 32px;
+    font-weight: 700;
+    color: g.$color-gray;
+}
+
+h1 {
+    font-family: g.$font-name-M;
+    font-size: 24px;
+    font-weight: 700;
+    color: g.$color-white;
+}
+
+.contents-deco {
+    font-family:  g.$font-name-roboto;
+    font-size: 24px;
+    font-weight: 700;
+    color: g.$color-white;
+
+
+    &::after {
+        display: block;
+        content: '';
+        width: 50px;
+        height: 0px;
+        border-top: solid 1px g.$color-white;
+        margin-top: 0.6em;
+    }
+}
+
+.map_deco {
+    font-family:  g.$font-name-roboto;
+    font-size: 24px;
+    font-weight: 700;
+    color: g.$color-white;
+
+    margin: 0;
+    padding: .2em;
+    position: relative;
+    z-index: 1;
+  
+
+}
+
+.sidebar__title{
+    font-family: g.$font-name-roboto;
+    font-size: 18px;
+    font-weight: 300;
+    color: g.$color-gray;
+}
+
+ul{
+    font-family: g.$font-name-roboto;
+    font-size: 18px;
+    font-weight: 300;
+    color: g.$color-gray;
+
+}

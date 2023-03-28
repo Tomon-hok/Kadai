@@ -1,0 +1,16 @@
+//フッターのレイアウト（配置）に関するコード。
+@use "../global" as g;
+
+.footer{
+    padding: 50px 0;
+    background-color: g.$color-brown-light;
+    color: g.$color-white;
+    font-size: 15px;
+    height: 20px;
+}
+
+.footer-container{
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+}

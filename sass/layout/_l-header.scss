@@ -1,0 +1,33 @@
+@use "../global" as g;
+
+
+/* headerの設定 */
+.header {
+    height: 200px;
+    background-color: g.$color-pink-light;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: min(92%, 1166px);
+    margin: auto;
+
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+
+        .header-container > .header-title {
+            flex: 1;
+        }
+
+        .header-container > .header-search {
+            flex: 2;
+        }
+    }
+}
+
