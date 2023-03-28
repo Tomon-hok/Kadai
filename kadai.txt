@@ -1,7 +1,12 @@
 Kadai.txt
 
-これは、Sourcetreeを使ったバージョン管理のテストに使います。
-Gitを使って、バージョン管理ができるようになるために練習しています。
+@useは、private関数。
+@formardは、public関数。
 
-前回はFirstCommitでした。今回は？
+だから、個々のSCSSファイル内でpublic呼び出しの時は、@useでcloseする。
+
+SCSSファイルの先頭で、
+    @use "setting" as s;
+と宣言すれば、setting内の変数は "s.***" で使用可能。
+
 
