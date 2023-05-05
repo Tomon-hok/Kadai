@@ -1,9 +1,13 @@
 /*-- mixinフォルダの中の_index.scss --*/
 @use "button";
-@use "composition";
+@use "typography";
+
+/*
+@use "inner";
 @use "feature-box";
 @use "text";
-
+@use "typography";
+*/
 
 
 //新しくパーシャルを作れば、ここに追記していく

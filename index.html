@@ -1,95 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- reset.css destyle -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"/>
 
-  <link rel="stylesheet" href="css/style.css">
+    <!-- style.css-->
+    <link rel="stylesheet" href="css/style.css">
 
-  <title>FrontPage</title>
-
+    <title>front-page</title>
 </head>
-<body>
-    <div class="container">
-        
-        <header class="header">
-            <div class="header-container">
-                <div class="header-title">
-                    Hamburger
-                </div>
-            
-                <div class="header-search">
-                    <div class="header-search__text"><input type="search" value=""></input></div>
-                    <button class="header-search__btn" type="submit">検索</button>
-                </div>
-            </div>
 
+<body>
+    <div class="l-container">
+
+        <header class="l-container__header l-header">
+            
+            <div class="l-header__inner">
+
+                <div class="l-header__left">
+                    <h1 class="title">Hamburger</h1>
+                </div>
+                
+                    
+                <div class="l-header__menu-title">
+                    <h2 class="menu-title">Menu</h2>
+                </div>
+
+                <div class="l-header__right">
+                    <form action="#" method="post" class="p-form">
+                        <input type="search" name="search" id="search" placeholder="🔍">
+                        <button type="submit" class="c-btn c-btn__search">検索</button>
+                    </form>
+                </div>
+
+            </div>
         </header>
 
-        <nav class="sidebar">
-            <ul><div class="sidebar__title">Menu</div>
-                <ul>バーガー
-                    <li>ハンバーガー</li>
-                    <li>チーズバーガー</li>
-                    <li>テリヤキバーガー</li>
-                    <li>アボカドバーガー</li>
-                    <li>フィッシュバーガー</li>
-                    <li>ベーコンバーガー</li>
-                    <li>チキンバーガー</li>
-                </ul>
-                <ul>サイド
-                    <li>ポテト</li>
-                    <li>サラダ</li>
-                    <li>ナゲット</li>
-                    <li>コーン</li>
-                </ul>
-                <ul>ドリンク
-                    <li>コーラ</li>
-                    <li>ファンタ</li>
-                    <li>オレンジ</li>
-                    <li>アップル</li>
-                    <li>紅茶（ice/hot）</li>
-                    <li>コーヒー（ice/hot）</li>
-                </ul>
-            </ul>
-        </nav>
-    
-        <section class="hero">
-            <div class="l-hero">
-                <h1>ダミーサイト</h1>
-            </div>
-        </section>
-    
-        <section class="contents">
-            <div class="contents-childbox contents-childbox__takeout">
-                <h2 class="contents-deco">TakeOut</h2>
+        <div class="l-container__top l-top">
+
+            <div class="l-top__title">
+                <h2 class="top-title">ダミーサイト</h2>
             </div>
 
-            <div class="contents-childbox contents-childbox__eatin">
-                <h2 class="contents-deco">EatIn</h2>  
-            </div>
-        </section>
-
-        <div class="map">
-            <div class="map-deco-layout">
-                <h3 class="map_deco">見出しが入ります</h3>
-            </div>
         </div>
-    
+
+        <section class="l-container__contents l-contents__container">
+            
+            <div class="l-contents__card-wrapper">
+            
+                <div class="l-contents__card l-contents__card1">
+
+                    <!-- .cardの内容 -->
+                    <div class="l-contents__title">
+                        <h3 class="card-title1">Take Out</h3>
+                    </div>
+
+                    <div class="l-contents__item-wrapper">
+                        <div class="l-contents__item">
+                            <h4>Take OUT</h4>
+                            <p>
+                                当店のテイクアウトで利用できる商品を掲載しています
+                                当店のテイクアウトで利用できる商品を掲載しています
+                                当店のテイクアウトで利用できる商品を掲載しています
+                                当店のテイクアウトで利用できる商品を掲載しています
+                                当店のテイクアウトで利用できる商品を掲載しています
+                                当店のテイクアウトで利用できる商品を掲載しています
+                            </p>
+                        </div>
         
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-menu">
-                    ショップ情報｜ヒストリー
+                        <div class="l-contents__item">
+                            <h4>Take OUT</h4>
+                            <p>
+                                当店のテイクアウトで利用できる商品を掲載しています
+                                当店のテイクアウトで利用できる商品を掲載しています
+                                当店のテイクアウトで利用できる商品を掲載しています
+                                当店のテイクアウトで利用できる商品を掲載しています
+                                当店のテイクアウトで利用できる商品を掲載しています
+                                当店のテイクアウトで利用できる商品を掲載しています
+                            </p>
+                        </div>
+                    </div>
+    
+
                 </div>
-                <div class="footer-copyright">
-                    RaiseTech
+        
+                <div class="l-contents__card l-contents__card2">
+                    <!-- .cardの内容 -->
+
+                    <div class="l-contents__title">
+                        <h3 class="card-title2">Eat In</h3>
+                    </div>
+
+                    <div class="l-contents__item-wrapper">
+                        <div class="l-contents__item">
+                            <h4 class="l-contents__item-title">Eat In</h4>
+                            <p>
+                                店内でお食事いただけるメニューです
+                                店内でお食事いただけるメニューです
+                                店内でお食事いただけるメニューです
+                                店内でお食事いただけるメニューです
+                                店内でお食事いただけるメニューです
+                                店内でお食事いただけるメニューです
+                                店内でお食事いただけるメニューです
+                                店内でお食事いただけるメニューです
+                            </p>
+                        </div>
+        
+                        <div class="l-contents__item">
+                            <h4 class="l-contents__item-title">Eat In</h4>
+                            <p>
+                                店内でお食事いただけるメニューです
+                                店内でお食事いただけるメニューです
+                                店内でお食事いただけるメニューです
+                                店内でお食事いただけるメニューです
+                                店内でお食事いただけるメニューです
+                                店内でお食事いただけるメニューです
+                                店内でお食事いただけるメニューです
+                                店内でお食事いただけるメニューです                            </p>
+                        </div>
+                    </div>
+
+
                 </div>
+        
+            </div> 
+            <!-- /card-wrapper -->
+        </section> 
+        <!-- /container -->
+
+        <section class="l-container__map l-contents__map">
+
+            <div class="l-contents__map-wrapper">
+
+                <div class="l-contents__map-title">
+                    <h3 class="map-title">見出しが入ります</h3>
+                </div>
+    
+                <p class="l-contents__map-detail">
+                    テキストが入ります。テキストが入ります。
+                    テキストが入ります。テキストが入ります。
+                    テキストが入ります。テキストが入ります。
+                    テキストが入ります。テキストが入ります。
+                    テキストが入ります。テキストが入ります。
+                    テキストが入ります。テキストが入ります。
+                    テキストが入ります。テキストが入ります。
+                    テキストが入ります。テキストが入ります。
+                    テキストが入ります。テキストが入ります。
+                    テキストが入ります。テキストが入ります。
+                    テキストが入ります。テキストが入ります。
+                    テキストが入ります。テキストが入ります。
+                    テキストが入ります。テキストが入ります。
+                    テキストが入ります。テキストが入ります。
+                    テキストが入ります。テキストが入ります。
+                    テキストが入ります。テキストが入ります。
+                    テキストが入ります。テキストが入ります。
+                    テキストが入ります。テキストが入ります。
+                    テキストが入ります。テキストが入ります。
+                    テキストが入ります。                    
+                </p>
+   
+            </div>
+        </section>
+
+        <div class="l-container__sidebar l-sidebar">
+
+            <div class="l-sidebar__title">
+                <h2 class="menu-title">Menu</h2>
+            </div>
+
+            <ul class="menu-item">バーガー
+                <li class="menu-item__details">ハンバーガー</li>
+                <li class="menu-item__details">チーズバーガー</li>
+                <li class="menu-item__details">テリヤキバーガー</li>
+                <li class="menu-item__details">アボカドバーガー</li>
+                <li class="menu-item__details">フィッシュバーガー</li>
+                <li class="menu-item__details">ベーコンバーガー</li>
+                <li class="menu-item__details">チキンバーガー</li>
+            </ul>
+
+            <ul class="menu-item">サイド
+                <li class="menu-item__details">ポテト</li>
+                <li class="menu-item__details">サラダ</li>
+                <li class="menu-item__details">ナゲット</li>
+                <li class="menu-item__details">コーン</li>
+            </ul>
+
+            <ul class="menu-item">ドリンク
+                <li class="menu-item__details">コーラ</li>
+                <li class="menu-item__details">ファンタ</li>
+                <li class="menu-item__details">オレンジ</li>
+                <li class="menu-item__details">アップル</li>
+                <li class="menu-item__details">紅茶</li>
+                <li class="menu-item__details">コーヒー</li>
+            </ul>
+
+        </div>
+
+        <footer class="l-container__footer l-footer">
+            <div class="l-footer__wrapper">
+                <ul class="l-footer__menu">
+                    <li><a href="#">ショップ情報</a></li>
+                    <li>｜</li>
+                    <li><a href="#">ヒストリー</a></li>
+                </ul>
+
+                <div class="l-footer__copylight">Copyright: RaiseTech</div>
             </div>
         </footer>
+
     </div>
 </body>
-
 </html>

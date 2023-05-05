@@ -1,7 +1,13 @@
 /*-- layoutフォルダの中の_index.scss --*/
-@use "l-footer";
-@use "l-header";
-@use "l-main";
-@use "l-sidebar";
+@use "container";
+@use "header";
+@use "top";
+@use "sidebar";
+@use "contents";
+@use "footer";
 
+/*
+@use "main";
+@use "footer";
+*/
 //新しくパーシャルを作れば、ここに追記していく

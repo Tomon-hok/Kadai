@@ -1,8 +1,44 @@
 @use "../global" as g;
 
-.header-search__btn{
-    border: 1px solid g.$color-gray;
+
+/*-----------------------------------
+    button-common
+-----------------------------------*/
+.c-btn{
+    display: inline-block;
+    background-color: g.$color-gray-light;
+    color: g.$color-black;
+    font-size: 18px;
     border-radius: 10px;
-    width: 136px;
-    height: 20px;
+    border: none;
+    text-align: center;
 }
+
+.c-btn:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+
+.c-btn__search{
+    background-color: g.$color-gray-light;
+    border: 1px solid g.$color-gray;
+    width: 150px;
+    height: 50px;
+}
+
+
+/*
+display: inline-block;
+padding: 3px 20px;
+color: $color-base;
+background-color: $color-accent;
+border: solid 2px $color-accent;
+border-radius: 50px;
+font-weight: bold;
+text-decoration: none;
+&:hover {
+    color: $color-accent;
+    background-color: $color-base;
+}
+*/

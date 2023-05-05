@@ -1,6 +1,7 @@
 /*-- projectフォルダの中の_index.scss --*/
-@use "./p-hero";
-@use "./p-front-map";
-@use "./p-home-block";
-
+@use "form";
+@use "map";
+/*
+@use "contents";
+*/
 //新しくパーシャルを作れば、ここに追記していく
