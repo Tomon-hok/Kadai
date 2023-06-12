@@ -11,7 +11,7 @@
   display: inline-block;
   background-color: #f2ede9;
   color: #3c2a10;
-  font-size: 18px;
+  font-size: 16px;
   border-radius: 10px;
   border: none;
   text-align: center;
@@ -27,6 +27,7 @@
   border: 1px solid #707070;
   width: 150px;
   height: 50px;
+  margin-left: 2rem;
 }
 
 /*
@@ -44,61 +45,112 @@ text-decoration: none;
 }
 */
 /*フォントの定義*/
-h1.title {
+.header-title {
   font-family: "Roboto";
-  font-weight: 700;
-  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 800;
+  font-size: clamp(64px, 5vw, 84px);
   color: #707070;
 }
 
-.top-title {
-  font-family: "M+ 1m";
-  font-weight: 700;
-  font-size: clamp(36px, 5vw, 48px);
+.nav-title {
+  font-family: "Roboto";
+  font-weight: 600;
+  font-size: clamp(23px, 5vw, 34px);
+  color: #707070;
+}
+
+.hero-title {
+  font-family: "mplus-1m-bold";
+  font-weight: 400;
+  font-size: clamp(24px, 5vw, 36px);
   color: #fff;
 }
 
-.menu-title {
+.contents-title {
+  font-family: "mplus-1m-bold";
+  font-weight: 700;
+  font-size: clamp(40px, 5vw, 80px);
+  color: #fff;
+  padding-top: 1em;
+}
+.contents-title::after {
+  display: block;
+  content: "";
+  width: 60px;
+  height: 10px;
+  border-top: solid 3px #fff;
+  margin-top: 0.5em;
+}
+.contents-title__left {
+  opacity: 0.8;
+}
+
+.location-title {
+  font-family: "mplus-1m-bold";
+  font-weight: 700;
+  font-size: clamp(30px, 5vw, 36px);
+  color: #fff;
+}
+.location-title::after {
+  display: block;
+  content: "";
+  width: 60px;
+  height: 10px;
+  border-top: solid 3px #fff;
+  margin-top: 1em;
+}
+
+.sidebar-title {
   font-family: "Roboto";
   font-weight: 700;
   font-size: clamp(23px, 5vw, 34px);
   color: #707070;
 }
 
-.menu-item {
+.sidebar-item {
   font-family: "Roboto";
-  font-weight: 700;
+  font-weight: bold;
   font-size: clamp(24px, 5vw, 24px);
   color: #707070;
-  font-weight: bold;
 }
-
-.menu-item__details {
+.sidebar-item__details {
   font-family: "Roboto";
-  font-weight: 400;
-  font-size: clamp(18px, 5vw, 20px);
+  font-weight: 300;
+  font-size: clamp(16px, 5vw, 18px);
   color: #707070;
 }
 
-.card-title1 {
-  font-family: "M+ 1m";
+.c-card {
+  display: block;
+  margin-top: auto;
+  margin-bottom: 2em;
+  background-color: #fff;
+  opacity: 0.7;
+}
+.c-card dt {
+  font-family: "mplus-1m-regular";
   font-weight: 700;
-  font-size: clamp(40px, 5vw, 80px);
-  color: #EAEAEA;
+  font-size: clamp(12px, 2vw, 24px);
+  color: #3c2a10;
+  margin: 1em 1em;
+}
+.c-card dd {
+  font-family: "mplus-1m-regular";
+  font-weight: 200;
+  font-size: clamp(10px, 1.5vw, 16px);
+  color: #3c2a10;
+  margin: 1em 1em;
 }
 
-.card-title2 {
-  font-family: "M+ 1m";
-  font-weight: 700;
-  font-size: clamp(40px, 5vw, 80px);
-  color: #fff;
+.c-sideber {
+  list-style: none;
+  margin-left: 35px;
+  padding-bottom: 30px;
 }
-
-.map-title {
-  font-family: "M+ 1m";
-  font-weight: 700;
-  font-size: clamp(30px, 5vw, 36px);
-  color: #fff;
+.c-sideber__details {
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-bottom: 20px;
 }
 
 /*-- mixinフォルダの中の_index.scss --*/
@@ -112,17 +164,10 @@ html {
   font-size: 62.5%;
 }
 
-/*
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+a {
+  text-decoration: none;
 }
 
-h1,h2,h3,h4,h5,h6,p {
-    margin: 0;
-}
-*/
 /*================================================================
 Chrome/Firefox/Edgeなど、各ブラウザはそれぞれデフォルトで効くCSSを持っています。
 何もしないと見え方が微妙に変わるので、デフォルトのCSSをリセットして
@@ -161,14 +206,16 @@ body {
   margin: 0 auto;
   min-height: 100vh;
   display: grid;
-  grid-template: "header header right" 350px "hero-header hero-header right " 650px "center center right " "footer footer footer" 250px/100px 1fr 150px;
+  grid-template: "header header sidebar" "hero-header hero-header sidebar" "center center sidebar" "footer footer footer"/1fr 1fr 250px;
+  /*
+      "header header right" 350px
+      "hero-header hero-header right " 650px
+      "center center right " 
+      "footer footer footer" 250px/
+      100px 1fr 150px ;
+  */
 }
 
-@media screen and (max-width: 1200px) {
-  body {
-    grid-template: "header" 150px "hero-header" 200px "center" 1fr "right " 0 "footer" 100px;
-  }
-}
 header {
   grid-area: header;
 }
@@ -182,247 +229,78 @@ main {
 }
 
 aside {
-  grid-area: right;
+  grid-area: sidebar;
 }
 
 footer {
   grid-area: footer;
 }
 
-/*
-.l-container{
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr) 20%;
-    margin: auto;
-    //grid-template-rows: 1fr,1fr,2fr,1fr,4fr;
-    grid-gap: 0px;
-
-    /*
-    & > * {
-      background-color: orangered;
-      padding: 10px;
-      color: white;
-      font-size: 20px;
-      font-family: sans-serif;
-    }
-
-
-    .l-container__header {
-      grid-column: 1 / 3;
-      height: 220px;
-    }
-
-    .l-container__top {
-      grid-column: 1 / span 2;
-      height: 530px;
-    }
-
-    .l-container__contents {
-      grid-column: 1 / span 2;
-    }
-
-    .l-container__map {
-      grid-column: 1 / span 2;
-    }
-
-    .l-container__sidebar {
-      grid-column: 3 / 4;
-      grid-row: 1 / span 4;
-    }
-
-    .l-container__footer {
-      grid-column: 1 / -1;
-    }
-
-  }
-  */
+/*---headerの配置（レイアウト）---*/
 .l-header {
-  background-color: #FFF7EF;
+  width: 100%;
+  height: 180px;
 }
 
-.l-header__inner {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-}
+/*忘備録的（タブレットで表示消す
+    @include g.mq('tab'){
+        .l-header__menu-title{
+            visibility: visible;
+        }
 
-.l-header__left {
-  margin-top: 50px;
-  margin-left: 20px;
-}
+        .l-header__inner{
+            width: 100%;
+            flex-direction: column;
+        }
 
-.l-header__right {
-  width: 500px;
-  margin: 40px;
-}
+        .l-header__left{
+            text-align: center;
+        }
 
-.l-header__menu-title {
-  text-align: right;
-  visibility: hidden;
-}
 
-/*忘備録的（タブレットで表示消す）*/
-@media screen and (max-width: 1000px) {
-  .l-header__menu-title {
-    visibility: visible;
-  }
-  /*今の状態だと、検索画面が欠ける*/
-  .l-header__inner {
-    justify-content: center;
-    flex-direction: column;
-  }
-}
-.l-top {
-  top: 0;
-  background-image: url("../img/mainvisual-pc.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+    }
 
-.l-top__title {
-  margin-top: 250px;
-  margin-left: 50px;
 }
-
+*/
 .l-sidebar {
-  background-color: #f2ede9;
   position: relative;
 }
 
-.l-sidebar__title {
-  margin-top: 85px;
-  padding-left: 45px;
-  padding-bottom: 20px;
-}
-
-.menu-item {
-  list-style: none;
-  line-height: 2;
-  padding-left: 45px;
-  padding-bottom: 20px;
-}
-
-.menu-item__details {
-  list-style: none;
-  line-height: 1.5;
-  padding-left: 20px;
-}
-
-/*忘備録的（タブレットで表示消す）*/
-@media screen and (max-width: 1000px) {
-  .l-sidebar {
-    display: none;
-  }
-}
 .l-contents__container {
-  border: 3px solid red;
-  height: 1500px;
+  height: 2000px;
 }
 
-.l-contents__title {
-  margin: 1.5em 1.8em;
-}
-
-.l-contents__title::after {
-  display: block;
-  content: "";
-  width: 50px;
-  height: 10px;
-  border-top: solid 1px #fff;
-  margin-top: 2em;
-}
-
-.l-contents__card-wrapper {
-  border: 3px solid #d81bb8;
-  height: 100%;
-  width: 100%;
-  padding: 100px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  grid-column-gap: 50px;
-  grid-row-gap: 40px;
-}
-
-.l-contents__card {
-  border: 3px solid #d8d8d8;
-  display: grid;
-  grid-row-gap: 40px;
-}
-
-.l-contents__card1 {
-  background-image: url("../img/takeout.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.l-contents__card2 {
-  background-image: url("../img/eatin.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.l-contents__item-wrapper {
-  display: flex;
-  flex-direction: column;
-  margin: auto 1em 0.5em 1.8em;
-}
-
-.l-contents__item {
-  display: block;
-  margin-top: auto;
-  margin-bottom: 2em;
-  background-color: #fff;
-  opacity: 0.7;
-}
-
-.l-contents__item h4 {
-  font-family: "M+ 1m";
-  font-weight: 700;
-  font-size: clamp(12px, 2vw, 24px);
-  color: #3c2a10;
-  margin: 1em 1em;
-}
-
-.l-contents__item p {
-  font-family: "M+ 1m";
-  font-weight: 400;
-  font-size: clamp(10px, 1.5vw, 16px);
-  color: #3c2a10;
-  margin: 1em 1em;
-}
-
-.l-contents__map {
+/*
+.l-contents__map{
   position: relative;
   width: 100%;
-  background-image: url("../img/shop_map.png");
-  background-position: 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.l-contents__map::after {
-  content: "";
-  background-color: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+
+  @include g.background("../img/shop_map.png",50%,cover);
+
+  &::after{
+    content: '';
+    background-color: rgba(0,0,0,.6);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
 }
 
-.l-contents__map-title {
+.l-contents__map-title{
   margin: 5em 2em;
-}
-.l-contents__map-title::after {
-  display: block;
-  content: "";
-  width: 50px;
-  height: 10px;
-  border-top: solid 1px #fff;
-  margin-top: 2em;
+
+  &::after{
+    display: block;
+    content: '';
+    width: 50px;
+    height: 10px;
+    border-top: solid 1px g.$color-white;
+    margin-top: 2em;
+  }
+
 }
 
 .l-contents__map-wrapper {
@@ -430,49 +308,27 @@ footer {
   width: 70%;
   height: 650px;
   margin: 0;
+
   border: 3px solid #d81bb8;
-  background-color: #3c2a10;
+
+  background-color: g.$color-black;
   opacity: 0.3;
+
 }
 
-.l-contents__map-detail {
+.l-contents__map-detail{
   display: block;
   margin: 2em;
-  font-family: "M+ 1m";
-  font-weight: 400;
-  font-size: 12;
-  color: #fff;
+  @include g.font(g.$font-name-M, 10,12,  17, 400, g.$color-white);
   line-height: 1.5;
 }
-
+*/
 .l-footer {
-  height: 150px;
-  background-color: #9d8670;
+  height: auto;
 }
 
-.l-footer__wrapper {
-  display: grid;
-  gap: 50px;
-  justify-items: center;
-  margin: 2em 5em;
-}
-
-.l-footer__menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5px;
-  font-family: "M+ 1m";
-  font-weight: 400;
-  font-size: 12;
-  color: #fff;
-}
-
-.l-footer__copylight {
-  font-family: "M+ 1m";
-  font-weight: 400;
-  font-size: 12;
-  color: #fff;
+.l-map {
+  height: 650px;
 }
 
 /*-- layoutフォルダの中の_index.scss --*/
@@ -480,24 +336,50 @@ footer {
 @use "main";
 @use "footer";
 */
+/* headerの装飾関係*/
+.p-header {
+  width: 100%;
+  height: 150px;
+  background-color: #FFF7EF;
+  display: flex;
+  justify-content: space-between;
+  margin-right: auto;
+}
+.p-header__title {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: clamp(40px, 5vw, 64px);
+  color: #707070;
+}
+.p-header__left {
+  padding: 1em;
+}
+.p-header__right {
+  padding: 2em;
+}
+
+.p-hero {
+  background: url("../img/mainvisual-pc.jpg") no-repeat center center;
+  background-size: cover;
+  height: 30em;
+}
+.p-hero__title {
+  margin-top: 15em;
+  margin-left: 5em;
+}
+
 input[type=search] {
-  width: 400px;
-  height: 50px;
-  border: 3px solid #f2ede9;
-  font-size: 18px;
   display: block;
-  margin: auto;
-  padding: 15px;
+  width: 300px;
+  height: 50px;
+  max-width: 100%;
+  border: 3px solid #f2ede9;
   border-radius: 10px;
-  margin-right: 20px;
-  margin-bottom: 20px;
 }
 
 .p-form {
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
-  margin-top: 20px;
 }
 
 /*
@@ -516,33 +398,121 @@ input::after{
     left: 5px;             /* アイコンの位置。微調整してね
 }
 */
+.p-main__wrapper {
+  height: 100%;
+  width: 100%;
+  padding: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-column-gap: 50px;
+  grid-row-gap: 40px;
+}
+
+.p-contents {
+  border: 3px solid #d8d8d8;
+  display: grid;
+  grid-row-gap: 40px;
+}
+.p-contents__title {
+  margin: 1.5em 1.8em;
+}
+.p-contents__left {
+  background: url("../img/takeout.jpg") no-repeat center center;
+  background-size: cover;
+}
+.p-contents__right {
+  background: url("../img/eatin.jpg") no-repeat center center;
+  background-size: cover;
+}
+.p-contents__details {
+  display: flex;
+  flex-direction: column;
+  margin: auto 1em 0.5em 1em;
+}
+
 .p-map {
   position: relative;
-  width: 100%;
-  height: 350px;
-  background-image: url("../img/shop_map.png");
-  background-position: 50%;
+  height: 100%;
+  background: url("../img/shop_map.png") no-repeat 50% 50%;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 .p-map::after {
+  position: absolute;
   content: "";
   background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
 }
 
-.map-deco-layout {
-  width: 50%;
-  height: 350px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 2px solid #000000;
+.p-location {
+  display: block;
+  width: 70%;
+  height: 100%;
+  border: 3px solid #d8d8d8;
+  background-color: rgba(0, 0, 0, 0.29);
+}
+.p-location__title {
+  padding: 5em 5em;
+}
+.p-location__details {
+  padding: 3em 5em;
+}
+.p-location p {
+  font-family: "mplus-1m-regular";
+  font-weight: 200;
+  font-size: clamp(10px, 1.5vw, 16px);
+  color: #fff;
 }
 
-/*-- projectフォルダの中の_index.scss --*/
-/*
-@use "contents";
-*//*# sourceMappingURL=style.css.map */
+.p-footer {
+  background-color: #9d8670;
+}
+.p-footer__wrapper {
+  display: grid;
+  gap: 50px;
+  justify-items: center;
+  margin: 2em 5em;
+}
+.p-footer__information {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+.p-footer__information li {
+  font-family: "mplus-1m-bold";
+  font-weight: 400;
+  font-size: 12;
+  color: #fff;
+}
+.p-footer__information a {
+  font-family: "mplus-1m-bold";
+  font-weight: 400;
+  font-size: 12;
+  color: #fff;
+}
+.p-footer__copylight {
+  font-family: "mplus-1m-bold";
+  font-weight: 400;
+  font-size: 12;
+  color: #fff;
+}
+
+.p-nav {
+  display: none;
+  background-color: #FFF7EF;
+  text-align: right;
+}
+
+.p-sidebar {
+  background-color: #f2ede9;
+}
+.p-sidebar__title {
+  margin-top: 70px;
+  margin-left: 40px;
+  padding-bottom: 80px;
+}
+
+/*-- projectフォルダの中の_index.scss --*//*# sourceMappingURL=style.css.map */

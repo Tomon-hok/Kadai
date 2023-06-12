@@ -1,7 +1,12 @@
 /*-- projectフォルダの中の_index.scss --*/
+@use "header";
+@use "hero";
 @use "form";
-@use "map";
-/*
+@use "main";
 @use "contents";
-*/
+@use "map";
+@use "footer";
+@use "nav";
+@use "sidebar";
+
 //新しくパーシャルを作れば、ここに追記していく
