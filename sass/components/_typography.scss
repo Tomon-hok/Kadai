@@ -1,0 +1,60 @@
+@use "../global" as g;
+
+/*フォントの定義*/
+.header-title {
+    @include g.font(g.$font-name-roboto,64px, 5vw, 84px,800,g.$color-gray);
+}
+
+.nav-title{
+    @include g.font(g.$font-name-roboto,23px, 5vw, 34px,600,g.$color-gray);
+}
+
+.hero-title {
+    @include g.font(g.$font-name-M,24px,5vw, 36px,400,g.$color-white);
+}
+
+.contents-title {
+    @include g.font(g.$font-name-M,40px, 5vw, 80px,700,g.$color-white);
+
+    padding-top: 1em;
+
+    &::after{
+        display: block;
+        content: '';
+        width: 60px;
+        height: 10px;
+        border-top: solid 3px g.$color-white;
+        margin-top: 0.5em;
+    }
+
+    &__left{
+        opacity: 0.8;
+    }
+}
+
+.location-title {
+    @include g.font(g.$font-name-M,30px,5vw, 36px,700,g.$color-white);
+
+    &::after{
+        display: block;
+        content: '';
+        width: 60px;
+        height: 10px;
+        border-top: solid 3px g.$color-white;
+        margin-top: 1em;
+    }
+
+}
+
+
+.sidebar-title{
+    @include g.font(g.$font-name-roboto,23px, 5vw, 34px,700,g.$color-gray);
+}
+
+.sidebar-item{
+    @include g.font(g.$font-name-roboto,24px, 5vw, 24px,bold,g.$color-gray);
+    
+    &__details{
+        @include g.font(g.$font-name-roboto,16px,5vw, 18px,300,g.$color-gray);
+    }
+}

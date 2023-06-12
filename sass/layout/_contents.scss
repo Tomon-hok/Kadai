@@ -1,0 +1,61 @@
+@use "../global/" as g;
+
+
+
+.l-contents__container {
+    height: 2000px;
+}
+
+/*
+.l-contents__map{
+  position: relative;
+  width: 100%;
+
+  @include g.background("../img/shop_map.png",50%,cover);
+
+  &::after{
+    content: '';
+    background-color: rgba(0,0,0,.6);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+}
+
+.l-contents__map-title{
+  margin: 5em 2em;
+
+  &::after{
+    display: block;
+    content: '';
+    width: 50px;
+    height: 10px;
+    border-top: solid 1px g.$color-white;
+    margin-top: 2em;
+  }
+  
+}
+
+.l-contents__map-wrapper {
+  display: inline-block;
+  width: 70%;
+  height: 650px;
+  margin: 0;
+  
+  border: 3px solid #d81bb8;
+
+  background-color: g.$color-black;
+  opacity: 0.3;
+
+}
+
+.l-contents__map-detail{
+  display: block;
+  margin: 2em;
+  @include g.font(g.$font-name-M, 10,12,  17, 400, g.$color-white);
+  line-height: 1.5;
+}
+*/

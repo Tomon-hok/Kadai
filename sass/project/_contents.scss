@@ -1,0 +1,28 @@
+@use "../global" as g;
+
+.p-contents{
+    
+    border: 3px solid #d8d8d8;
+    display: grid;
+    grid-row-gap: 40px;
+
+    &__title{
+        margin: 1.5em 1.8em;
+    }
+
+    &__left{
+        @include g.background("../img/takeout.jpg",center,cover);
+    }
+
+    &__right{
+        @include g.background("../img/eatin.jpg",center,cover);
+    }
+
+    &__details{ 
+        display: flex;
+        flex-direction: column;
+        margin: auto 1em 0.5em 1em;
+    
+    }
+}
+

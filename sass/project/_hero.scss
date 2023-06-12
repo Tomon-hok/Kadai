@@ -1,0 +1,13 @@
+@use "../global" as g;
+
+.p-hero {
+
+    @include g.background("../img/mainvisual-pc.jpg",center,cover);
+
+    height: 30em;
+    
+    &__title {
+        margin-top: 15em;
+        margin-left: 5em;
+    }
+}

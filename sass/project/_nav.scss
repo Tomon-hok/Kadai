@@ -1,0 +1,10 @@
+@use "../global" as g;
+
+.p-nav{
+    //border: 3px solid #d81bb8;
+
+    display: none;
+    background-color: g.$color-pink-light;
+    text-align: right;
+}
+    

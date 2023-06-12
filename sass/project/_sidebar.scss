@@ -1,0 +1,15 @@
+
+@use "../global" as g;
+
+.p-sidebar{
+    background-color: g.$color-gray-light;
+
+    &__title{
+
+        margin-top: 70px;
+        margin-left: 40px;
+        
+        padding-bottom: 80px;
+    }
+    
+}

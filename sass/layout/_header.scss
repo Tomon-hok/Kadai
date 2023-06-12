@@ -1,0 +1,30 @@
+@use "../global" as g;
+
+/*---headerの配置（レイアウト）---*/
+.l-header {
+    width: 100%;
+    height: 180px;
+}
+
+    /*忘備録的（タブレットで表示消す
+    @include g.mq('tab'){
+        .l-header__menu-title{
+            visibility: visible;
+        }
+
+        .l-header__inner{
+            width: 100%;
+            flex-direction: column;
+        }
+    
+        .l-header__left{
+            text-align: center;
+        }
+    
+            
+    }
+ 
+}
+*/
+
+

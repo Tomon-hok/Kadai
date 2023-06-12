@@ -1,0 +1,45 @@
+body {
+
+  width: 100%;
+  //max-width: 1200px;
+
+  margin: 0 auto;
+  min-height: 100vh;
+  display: grid;
+  grid-template:
+    "header header sidebar"
+    "hero-header hero-header sidebar"
+    "center center sidebar" 
+    "footer footer footer"/
+    1fr 1fr 250px ;
+
+    /*
+    "header header right" 350px
+    "hero-header hero-header right " 650px
+    "center center right " 
+    "footer footer footer" 250px/
+    100px 1fr 150px ;
+*/
+}
+
+
+header {
+  grid-area: header;
+}
+
+
+.hero-header {
+  grid-area: hero-header;
+}
+ 
+main {
+  grid-area: center;
+}
+ 
+aside {
+  grid-area: sidebar;
+}
+ 
+footer {
+  grid-area: footer;
+}

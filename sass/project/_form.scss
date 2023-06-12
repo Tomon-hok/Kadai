@@ -1,0 +1,34 @@
+@use "../global" as g;
+
+input[type="search"]{
+    display: block;
+    width: 300px;
+    height: 50px;
+    max-width: 100%;
+    border: 3px solid g.$color-gray-light;
+    border-radius: 10px;
+}
+
+.p-form{
+    display: flex;
+    flex-direction: row;
+}
+
+
+/*
+input::after{
+
+    display: inline-block; /* なくても大丈夫だけど、念の為 
+    position: relative;    /* 基準値とする 
+
+    content: "";           /* 疑似要素に必須/
+    width: 30px;           /* アイコンの横幅/
+    height: 30px;          /* アイコンの高さ/
+    background: url(../img/magnifying-glass-solid.svg) no-repeat center center / auto 100%; 
+    display: inline-block; /* 高さを持たせるためにインラインブロック要素にする 
+    position: absolute;    /* 相対位置に指定 
+    top: 10px;              /* アイコンの位置。微調整してね 
+    left: 5px;             /* アイコンの位置。微調整してね
+}
+*/
+

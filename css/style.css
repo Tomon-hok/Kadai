@@ -1,24 +1,548 @@
-/* Error: Missing argument $color.
- *    ,--> sass\layout\_contents.scss
- * 69 |   @include g.font(g.$font-name-M, 24, 700, g.$color-black);
- *    |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation
- *    '
- *    ,--> sass\global\mixin\_mixin.scss
- * 10 | @mixin font($font-family, $Min-font-size, $Max-font-size, $font-weight, $color) {
- *    |        ======================================================================== declaration
- *    '
- *   sass\layout\_contents.scss 69:3  font()
- *   sass\layout\_contents.scss 69:3  @use
- *   sass\layout\_index.scss 6:1      @use
- *   sass\style.scss 3:1              root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Missing argument $color.\a    \250c \2500 \2500 > sass\\layout\\_contents.scss\a 69 \2502    @include g.font(g.$font-name-M, 24, 700, g.$color-black);\d\a    \2502    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation\a    \2575 \a    \250c \2500 \2500 > sass\\global\\mixin\\_mixin.scss\a 10 \2502  @mixin font($font-family, $Min-font-size, $Max-font-size, $font-weight, $color) {\d\a    \2502         \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  declaration\a    \2575 \a   sass\\layout\\_contents.scss 69:3  font()\a   sass\\layout\\_contents.scss 69:3  @use\a   sass\\layout\\_index.scss 6:1      @use\a   sass\\style.scss 3:1              root stylesheet";
+@charset "UTF-8";
+/*--背景--*/
+/*--フォント--*/
+/*-- mixinフォルダの中の_index.scss --*/ /*Name*/
+/*SIZE*/
+/*-- settingフォルダの中の_index.scss --*/ /*-- globalフォルダの中の_index.scss --*/
+/*-----------------------------------
+    button-common
+-----------------------------------*/
+.c-btn {
+  display: inline-block;
+  background-color: #f2ede9;
+  color: #3c2a10;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
 }
+
+.c-btn:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.c-btn__search {
+  background-color: #f2ede9;
+  border: 1px solid #707070;
+  width: 150px;
+  height: 50px;
+}
+
+/*
+display: inline-block;
+padding: 3px 20px;
+color: $color-base;
+background-color: $color-accent;
+border: solid 2px $color-accent;
+border-radius: 50px;
+font-weight: bold;
+text-decoration: none;
+&:hover {
+    color: $color-accent;
+    background-color: $color-base;
+}
+*/
+/*フォントの定義*/
+h1.title {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: clamp(40px, 5vw, 64px);
+  color: #707070;
+}
+
+.top-title {
+  font-family: "M+ 1m";
+  font-weight: 700;
+  font-size: clamp(36px, 5vw, 48px);
+  color: #fff;
+}
+
+.menu-title {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: clamp(23px, 5vw, 34px);
+  color: #707070;
+}
+
+.menu-item {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: clamp(24px, 5vw, 24px);
+  color: #707070;
+  font-weight: bold;
+}
+
+.menu-item__details {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: clamp(18px, 5vw, 20px);
+  color: #707070;
+}
+
+.card-title1 {
+  font-family: "M+ 1m";
+  font-weight: 700;
+  font-size: clamp(40px, 5vw, 80px);
+  color: #EAEAEA;
+}
+
+.card-title2 {
+  font-family: "M+ 1m";
+  font-weight: 700;
+  font-size: clamp(40px, 5vw, 80px);
+  color: #fff;
+}
+
+.map-title {
+  font-family: "M+ 1m";
+  font-weight: 700;
+  font-size: clamp(30px, 5vw, 36px);
+  color: #fff;
+}
+
+/*-- mixinフォルダの中の_index.scss --*/
+/*
+@use "inner";
+@use "feature-box";
+@use "text";
+@use "typography";
+*/
+html {
+  font-size: 62.5%;
+}
+
+/*
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+}
+*/
+/*================================================================
+Chrome/Firefox/Edgeなど、各ブラウザはそれぞれデフォルトで効くCSSを持っています。
+何もしないと見え方が微妙に変わるので、デフォルトのCSSをリセットして
+ブラウザごとの表示の差異をなくすために書くのが「リセットCSS」です。
+================================================================*/
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, div, span, img, a, table, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+header, footer, nav, section, article, aside, figure, figcaption {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+  list-style-type: none;
+}
+
+/*-- mixinフォルダの中の_index.scss --*/
+body {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: grid;
+  grid-template: "header header right" 350px "hero-header hero-header right " 650px "center center right " "footer footer footer" 250px/100px 1fr 150px;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    grid-template: "header" 150px "hero-header" 200px "center" 1fr "right " 0 "footer" 100px;
+  }
+}
+header {
+  grid-area: header;
+}
+
+.hero-header {
+  grid-area: hero-header;
+}
+
+main {
+  grid-area: center;
+}
+
+aside {
+  grid-area: right;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/*
+.l-container{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 20%;
+    margin: auto;
+    //grid-template-rows: 1fr,1fr,2fr,1fr,4fr;
+    grid-gap: 0px;
+
+    /*
+    & > * {
+      background-color: orangered;
+      padding: 10px;
+      color: white;
+      font-size: 20px;
+      font-family: sans-serif;
+    }
+
+
+    .l-container__header {
+      grid-column: 1 / 3;
+      height: 220px;
+    }
+
+    .l-container__top {
+      grid-column: 1 / span 2;
+      height: 530px;
+    }
+
+    .l-container__contents {
+      grid-column: 1 / span 2;
+    }
+
+    .l-container__map {
+      grid-column: 1 / span 2;
+    }
+
+    .l-container__sidebar {
+      grid-column: 3 / 4;
+      grid-row: 1 / span 4;
+    }
+
+    .l-container__footer {
+      grid-column: 1 / -1;
+    }
+
+  }
+  */
+.l-header {
+  background-color: #FFF7EF;
+}
+
+.l-header__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.l-header__left {
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+.l-header__right {
+  width: 500px;
+  margin: 40px;
+}
+
+.l-header__menu-title {
+  text-align: right;
+  visibility: hidden;
+}
+
+/*忘備録的（タブレットで表示消す）*/
+@media screen and (max-width: 1000px) {
+  .l-header__menu-title {
+    visibility: visible;
+  }
+  /*今の状態だと、検索画面が欠ける*/
+  .l-header__inner {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+.l-top {
+  top: 0;
+  background-image: url("../img/mainvisual-pc.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.l-top__title {
+  margin-top: 250px;
+  margin-left: 50px;
+}
+
+.l-sidebar {
+  background-color: #f2ede9;
+  position: relative;
+}
+
+.l-sidebar__title {
+  margin-top: 85px;
+  padding-left: 45px;
+  padding-bottom: 20px;
+}
+
+.menu-item {
+  list-style: none;
+  line-height: 2;
+  padding-left: 45px;
+  padding-bottom: 20px;
+}
+
+.menu-item__details {
+  list-style: none;
+  line-height: 1.5;
+  padding-left: 20px;
+}
+
+/*忘備録的（タブレットで表示消す）*/
+@media screen and (max-width: 1000px) {
+  .l-sidebar {
+    display: none;
+  }
+}
+.l-contents__container {
+  border: 3px solid red;
+  height: 1500px;
+}
+
+.l-contents__title {
+  margin: 1.5em 1.8em;
+}
+
+.l-contents__title::after {
+  display: block;
+  content: "";
+  width: 50px;
+  height: 10px;
+  border-top: solid 1px #fff;
+  margin-top: 2em;
+}
+
+.l-contents__card-wrapper {
+  border: 3px solid #d81bb8;
+  height: 100%;
+  width: 100%;
+  padding: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-column-gap: 50px;
+  grid-row-gap: 40px;
+}
+
+.l-contents__card {
+  border: 3px solid #d8d8d8;
+  display: grid;
+  grid-row-gap: 40px;
+}
+
+.l-contents__card1 {
+  background-image: url("../img/takeout.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.l-contents__card2 {
+  background-image: url("../img/eatin.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.l-contents__item-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto 1em 0.5em 1.8em;
+}
+
+.l-contents__item {
+  display: block;
+  margin-top: auto;
+  margin-bottom: 2em;
+  background-color: #fff;
+  opacity: 0.7;
+}
+
+.l-contents__item h4 {
+  font-family: "M+ 1m";
+  font-weight: 700;
+  font-size: clamp(12px, 2vw, 24px);
+  color: #3c2a10;
+  margin: 1em 1em;
+}
+
+.l-contents__item p {
+  font-family: "M+ 1m";
+  font-weight: 400;
+  font-size: clamp(10px, 1.5vw, 16px);
+  color: #3c2a10;
+  margin: 1em 1em;
+}
+
+.l-contents__map {
+  position: relative;
+  width: 100%;
+  background-image: url("../img/shop_map.png");
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.l-contents__map::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.l-contents__map-title {
+  margin: 5em 2em;
+}
+.l-contents__map-title::after {
+  display: block;
+  content: "";
+  width: 50px;
+  height: 10px;
+  border-top: solid 1px #fff;
+  margin-top: 2em;
+}
+
+.l-contents__map-wrapper {
+  display: inline-block;
+  width: 70%;
+  height: 650px;
+  margin: 0;
+  border: 3px solid #d81bb8;
+  background-color: #3c2a10;
+  opacity: 0.3;
+}
+
+.l-contents__map-detail {
+  display: block;
+  margin: 2em;
+  font-family: "M+ 1m";
+  font-weight: 400;
+  font-size: 12;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.l-footer {
+  height: 150px;
+  background-color: #9d8670;
+}
+
+.l-footer__wrapper {
+  display: grid;
+  gap: 50px;
+  justify-items: center;
+  margin: 2em 5em;
+}
+
+.l-footer__menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  font-family: "M+ 1m";
+  font-weight: 400;
+  font-size: 12;
+  color: #fff;
+}
+
+.l-footer__copylight {
+  font-family: "M+ 1m";
+  font-weight: 400;
+  font-size: 12;
+  color: #fff;
+}
+
+/*-- layoutフォルダの中の_index.scss --*/
+/*
+@use "main";
+@use "footer";
+*/
+input[type=search] {
+  width: 400px;
+  height: 50px;
+  border: 3px solid #f2ede9;
+  font-size: 18px;
+  display: block;
+  margin: auto;
+  padding: 15px;
+  border-radius: 10px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.p-form {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+/*
+input::after{
+
+    display: inline-block; /* なくても大丈夫だけど、念の為 
+    position: relative;    /* 基準値とする 
+
+    content: "";           /* 疑似要素に必須/
+    width: 30px;           /* アイコンの横幅/
+    height: 30px;          /* アイコンの高さ/
+    background: url(../img/magnifying-glass-solid.svg) no-repeat center center / auto 100%; 
+    display: inline-block; /* 高さを持たせるためにインラインブロック要素にする 
+    position: absolute;    /* 相対位置に指定 
+    top: 10px;              /* アイコンの位置。微調整してね 
+    left: 5px;             /* アイコンの位置。微調整してね
+}
+*/
+.p-map {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background-image: url("../img/shop_map.png");
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.p-map::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.map-deco-layout {
+  width: 50%;
+  height: 350px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid #000000;
+}
+
+/*-- projectフォルダの中の_index.scss --*/
+/*
+@use "contents";
+*//*# sourceMappingURL=style.css.map */

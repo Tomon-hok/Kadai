@@ -1,0 +1,43 @@
+@use "../global" as g;
+
+.p-map {
+    position: relative;
+    height: 100%;
+
+    @include g.background("../img/shop_map.png",50%,cover);
+
+    &::after{
+      position: absolute;
+      content: '';
+      background-color: rgba(0,0,0,.5);
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+}
+    
+.p-location {
+
+  display: block;
+  width: 70%;
+  height: 100%;
+  border: 3px solid #d8d8d8;
+  background-color: rgba(0, 0, 0, 0.29);
+
+
+  &__title{
+    padding: 5em 5em;
+  }
+
+  &__details{
+    padding: 3em 5em;
+  }
+
+  p{
+    @include g.font(g.$font-name-M1m-reg, 10px,1.5vw, 16px, 200, g.$color-white);
+
+  }
+
+}
